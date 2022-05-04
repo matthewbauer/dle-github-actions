@@ -68,3 +68,18 @@ runs:
   steps:
     - run: $GITHUB_ACTION_PATH/entrypoint.sh
       shell: bash
+      env:
+        INPUT_OWNER: ${{ inputs.owner }}
+        INPUT_REPO: ${{ inputs.repo }}
+        INPUT_REF: ${{ inputs.ref }}
+        INPUT_PULL_REQUEST: ${{ inputs.pull_request }}
+        INPUT_COMPARE: ${{ inputs.compare }}
+        INPUT_COMMIT_SHA: ${{ inputs.commit_sha }}
+        INPUT_AUTHOR_NAME: ${{ inputs.author_name }}
+        INPUT_COMMANDS: ${{ inputs.commands }}
+        INPUT_DBNAME: ${{ inputs.dbname }}
+        INPUT_MIGRATION_ENVS: ${{ inputs.migration_envs }}
+        INPUT_DOWNLOAD_ARTIFACTS: ${{ inputs.download_artifacts }}
+        INPUT_OBSERVATION_INTERVAL: ${{ inputs.observation_interval }}
+        INPUT_MAX_LOCK_DURATION: ${{ inputs.max_lock_duration }}
+        INPUT_MAX_DURATION: ${{ inputs.max_duration }}
