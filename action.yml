@@ -64,5 +64,7 @@ outputs:
   response:
     description: 'The result of migration checks'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "composite"
+  steps:
+    - run: $GITHUB_ACTION_PATH/entrypoint.sh
+      shell: bash
